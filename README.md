@@ -28,10 +28,14 @@ javac helloworld.java
 docker build -t java8-helloworld .
 
 ### run image
+docker images -a
+
 docker run --name hellojava 67eca8c9dd66 
+
 Hello World
 
 docker logs hellojava
+
 Hello World
 
 docker rm hellojava
