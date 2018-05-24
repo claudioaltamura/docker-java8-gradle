@@ -16,10 +16,10 @@ Run container: ./gradlew startContainer
 
 ##With Dockerfile
 
-FROM openjdk:latest
-COPY * /opt/app/
-WORKDIR /opt/app
-CMD ["java", "HelloWorld"]
+	FROM openjdk:latest
+	COPY * /opt/app/
+	WORKDIR /opt/app
+	CMD ["java", "HelloWorld"]
 
 ### compile class
 javac helloworld.java
@@ -28,4 +28,10 @@ javac helloworld.java
 docker build -t java8-helloworld .
 
 ### run image
-docker run -it --rm --name my-running-app java8-helloworld
+docker run --name hellojava 67eca8c9dd66 
+Hello World
+
+docker logs hellojava
+Hello World
+
+docker rm hellojava
